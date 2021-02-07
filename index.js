@@ -19,7 +19,7 @@ mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true
-}).then(() => { console.log("Base de datos conectada")});
+}).then(() => { console.log("Base de datos conectada")}).catch(e => console.log(e));
 
 // Rutas de backend
 app.use('/api/animales', require('./routes/animales'));
